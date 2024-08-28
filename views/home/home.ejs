@@ -1,0 +1,900 @@
+<%- include('../home/header') %>
+
+<div class="slider-area slider-height-1">
+  <div class="hero-slider swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Single Slider  -->
+      <div class="swiper-slide bg-img d-flex" style="background-image: url(https://i.ytimg.com/vi/8UkieZl_hVQ/maxresdefault.jpg);">
+        <div class="container align-self-center">
+          <div class="slider-content-1 slider-animated-1 text-start pl-60px">
+            <span class="animated color-gray">NEW DESIGN FEATURES</span>
+            <h1 class="animated color-black">
+              Hamsung Galaxy <br />
+              <strong>S10+ Edge</strong>
+            </h1>
+            <a href="" class="shop-btn animated">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <!-- Single Slider  -->
+      <div class="swiper-slide bg-img d-flex" style="background-image: url(https://img.pikbest.com/origin/05/87/68/794pIkbEsTgxN.jpg!w700wp);">
+        <div class="container align-self-center">
+          <div class="slider-content-1 slider-animated-1 text-start pl-60px">
+            <span class="animated color-gray">WIRELESS BLUETOOTH GAMING</span>
+            <h1 class="animated color-black">
+              Bluetooth Gamepad <br />
+              <strong>IPEGA PG-9023</strong>
+            </h1>
+            <a href="" class="shop-btn animated">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <!-- Single Slider  -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+  </div>
+</div>
+
+<div class="static-area mtb-60px">
+  <div class="container">
+    <div class="static-area-wrap">
+      <div class="row">
+        <!-- Static Single Item Start -->
+        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
+          <div class="single-static">
+            <img src="assets/images/icons/static-icons-1.png" alt="" class="img-responsive" />
+            <div class="single-static-meta">
+              <h4>Free Shipping</h4>
+              <p>On all orders over $75.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- Static Single Item End -->
+        <!-- Static Single Item Start -->
+        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
+          <div class="single-static">
+            <img src="assets/images/icons/static-icons-2.png" alt="" class="img-responsive" />
+            <div class="single-static-meta">
+              <h4>Free Returns</h4>
+              <p>Returns are free within 9 days</p>
+            </div>
+          </div>
+        </div>
+        <!-- Static Single Item End -->
+        <!-- Static Single Item Start -->
+        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-sm-30px">
+          <div class="single-static">
+            <img src="assets/images/icons/static-icons-4.png" alt="" class="img-responsive" />
+            <div class="single-static-meta">
+              <h4>Support 24/7</h4>
+              <p>Contact us 24 hours a day</p>
+            </div>
+          </div>
+        </div>
+        <!-- Static Single Item End -->
+        <!-- Static Single Item Start -->
+        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
+          <div class="single-static">
+            <img src="assets/images/icons/static-icons-3.png" alt="" class="img-responsive" />
+            <div class="single-static-meta">
+              <h4>100% Payment Secure</h4>
+              <p>Your payment are safe with us.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Static Single Item End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Static Area End -->
+<!-- Banner Area Start -->
+<div class="banner-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <div class="banner-wrapper">
+          <a href=""><img src="https://bcp.cdnchinhphu.vn/334894974524682240/2022/7/22/co-bao-nhieu-cach-pha-cafe1-16584799681091678891784.jpg" height="255px" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="banner-wrapper">
+          <a href=""><img src="https://cdn.tgdd.vn/2021/11/CookDish/ca-phe-capuchino-la-gi-cach-uong-cafe-capuchino-va-cac-loai-avt-1200x676.jpg" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="banner-wrapper">
+          <a href=""><img src="https://media.vov.vn/sites/default/files/styles/large/public/2022-03/cf.png.jpg" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Area End -->
+<!-- category Area Start -->
+<div class="popular-categories-area mt-30px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2 class="section-heading">Popular Categories</h2>
+        </div>
+      </div>
+    </div>
+    <div class="category-slider slider-nav-style-1">
+      <div class="category-slider-wrapper swiper-wrapper">
+        <% pro.forEach(item =>{ %>
+        <div class="category-slider-item swiper-slide">
+          <div class="thumb-category">
+            <a href="/detail<%= item.id %>">
+              <img src="/images/<%= item.image %>" height="200px" alt="product-image.jpg" />
+            </a>
+          </div>
+          <div class="category-discript">
+            <h4>Smart Electronics</h4>
+            <ul>
+              <li><a href="#">Wearable Devices</a></li>
+              <li><a href="#">Smart Home Appliances</a></li>
+              <li><a href="#">Smart Remote Controls</a></li>
+              <li><a href="#">Smart Watches</a></li>
+            </ul>
+            <a href="" class="view-all-btn">View All</a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- category Area End -->
+<!-- Feature Area start -->
+<div class="feature-area mt-60px mb-30px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2 class="section-heading">Featured Products</h2>
+        </div>
+      </div>
+    </div>
+    <div class="feature-slider slider-nav-style-1">
+      <div class="feature-slider-wrapper swiper-wrapper">
+        <!-- Single Item -->
+        <% pro.forEach(item =>{ %>
+        <div class="feature-slider-item swiper-slide">
+          <article class="list-product">
+            <div class="img-block">
+              <a href="/detail<%= item.id %>" class="thumbnail">
+                <img class="first-img" src="/images/<%= item.image %>" height="300px" alt="" />
+              </a>
+              <div class="quick-view">
+                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="icon-magnifier icons"></i>
+                </a>
+              </div>
+            </div>
+            <ul class="product-flag">
+              <li class="new">New</li>
+            </ul>
+            <div class="product-decs">
+              <a class="inner-link" href=""><span><%= item.name %></span></a>
+              <h2><a href="" class="product-link"><%= item.content %></a></h2>
+              <div class="rating-product">
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+              </div>
+              <div class="pricing-meta">
+                <ul>
+                  <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                  <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                  <li class="discount-price">-10%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="add-to-link">
+              <ul>
+                <li class="cart"><a class="cart-btn" href="">ADD TO CART </a></li>
+                <li>
+                  <a href=""><i class="icon-heart"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="icon-shuffle"></i></a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <% }) %>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Feature Area End -->
+<!-- Deal Area Start -->
+<div class="deal-area bg-light-gray pt-60px pb-30px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2 class="section-heading">Deals Of The Day</h2>
+        </div>
+      </div>
+    </div>
+    <div class="deal-slider slider-nav-style-1">
+      <div class="deal-slider-wrapper swiper-wrapper">
+        <!-- Single Item -->
+        <% pro.forEach(item =>{ %>
+        <div class="deal-slider-item swiper-slide">
+          <article class="list-product">
+            <div class="img-block">
+              <a href="/detail<%= item.id %>" class="thumbnail">
+                <img class="first-img" src="/images/<%= item.image %>" height="250px" alt="" />
+                <img class="second-img" src="/images/<%= item.image %>" height="250px" alt="" />
+              </a>
+              <div class="quick-view">
+                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="icon-magnifier icons"></i>
+                </a>
+              </div>
+            </div>
+            <ul class="product-flag">
+              <li class="new">New</li>
+            </ul>
+            <div class="product-decs">
+              <a class="inner-link" href=""><span><%= item.name %></span></a>
+              <h2><a href="" class="product-link"><%= item.content %></a></h2>
+              <div class="rating-product">
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+                <i class="ion-android-star"></i>
+              </div>
+              <div class="pricing-meta">
+                <ul>
+                  <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                  <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                  <li class="discount-price">-10%</li>
+                </ul>
+              </div>
+              <div class="availability-list in-stock">Availability: <span>300 In Stock</span></div>
+              <div class="clockdiv">
+                <div data-countdown="2021/12/31"></div>
+              </div>
+            </div>
+            <div class="add-to-link">
+              <ul>
+                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
+                <li>
+                  <a href=""><i class="icon-heart"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="icon-shuffle"></i></a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <% }) %>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Area Start -->
+  <div class="banner-area mt-30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="banner-wrapper">
+            <a href=""><img src="https://www.vlance.vn/uploads/portfolio/1200x630/thiet-ke-poster-cho-san-pham-do-uong-nuoc-ep-hoa-qua-sua-chua-nuoc-khoang-51475.jpeg" height="500px" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Area End -->
+</div>
+<!-- Deal Area End -->
+<!-- Category Tab Area Start -->
+<section class="category-tab-area mt-60px mb-40px">
+  <div class="container">
+    <div class="section-title d-flex">
+      <h2>Audio & Video</h2>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs sub-category d-flex justify-content-end flex-grow-1">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#tab-1">Televisions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#tab-2">TV Receivers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Projectors</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content banner-area">
+      <!-- 1st tab start -->
+      <div id="tab-1" class="tab-pane active">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="https://www.shutterstock.com/shutterstock/photos/1799144344/display_1500/stock-vector-sparkling-water-promo-banner-with-lemons-on-tropical-background-in-d-illustration-1799144344.jpg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="280px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 1st tab end -->
+      <!-- 2nd tab start -->
+      <div id="tab-2" class="tab-pane fade">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="300px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2nd tab end -->
+      <!-- 3rd tab start -->
+      <div id="tab-3" class="tab-pane fade">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="assets/images/banner-image/5.jpg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="300px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3rd tab end -->
+    </div>
+  </div>
+</section>
+<!-- Category Tab Area end -->
+<!-- Category Tab Area Start -->
+
+<section class="category-tab-area mb-40px">
+  <div class="container">
+    <div class="section-title d-flex">
+      <h2>Camera & Photo</h2>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs sub-category d-flex justify-content-end flex-grow-1">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#tab-4">Digital Cameras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Camcorders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Camera Drones</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content banner-area">
+      <!-- 1st tab start -->
+      <div id="tab-1" class="tab-pane active">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="https://img.pikbest.com/origin/06/17/97/18GpIkbEsTx2g.jpg!w700wp" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="280px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 1st tab end -->
+      <!-- 2nd tab start -->
+      <div id="tab-2" class="tab-pane fade">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="assets/images/banner-image/5.jpg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="300px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2nd tab end -->
+      <!-- 3rd tab start -->
+      <div id="tab-3" class="tab-pane fade">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 mt-lm-55px">
+            <div class="banner-wrapper">
+              <a href=""><img src="assets/images/banner-image/5.jpg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="feature-slider-2 slider-nav-style-1">
+              <div class="feature-slider-wrapper swiper-wrapper">
+                <!-- Single Item -->
+                <% pro.forEach(item =>{ %>
+                <div class="feature-slider-item swiper-slide">
+                  <article class="list-product">
+                    <div class="img-block">
+                      <a href="/detail<%= item.id %>" class="thumbnail">
+                        <img class="first-img" src="/images/<%= item.image %>" height="300px" alt="" />
+                      </a>
+                      <div class="quick-view">
+                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="icon-magnifier icons"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <ul class="product-flag">
+                      <li class="new">New</li>
+                    </ul>
+                    <div class="product-decs">
+                      <a class="inner-link" href=""><span><%= item.name %></span></a>
+                      <h2><a href="" class="product-link"><%= item.content %></a></h2>
+                      <div class="rating-product">
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                        <i class="ion-android-star"></i>
+                      </div>
+                      <div class="pricing-meta">
+                        <ul>
+                          <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                          <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                          <li class="discount-price">-10%</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="add-to-link">
+                      <ul>
+                        <li class="cart"><a title="Add to cart" href="#"><i class="icon-bag"></i></a></li>
+                        <li>
+                          <a title="Add to wishlist" href=""><i class="icon-heart"></i></a>
+                        </li>
+                        <li>
+                          <a title="Add to compare" href=""><i class="icon-shuffle"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+                <% }) %>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3rd tab end -->
+    </div>
+  </div>
+</section>
+<!-- Category Tab Area end -->
+<!-- Brand area start -->
+<div class="brand-area mb-60px">
+  <div class="container">
+    <div class="brand-slider slider-nav-style-1 slider-nav-style-2 ">
+      <div class="brand-slider-wrapper swiper-wrapper">
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/1.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/2.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/3.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/4.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/5.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/1.jpg" alt="" /></a>
+        </div>
+        <div class="brand-slider-item swiper-slide">
+          <a href="#"><img src="assets/images/brand-logo/2.jpg" alt="" /></a>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Brand area end -->
+
+<!-- Recently Add area start -->
+<div class="recent-add-area mb-60px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2 class="section-heading">Recently Added</h2>
+        </div>
+      </div>
+    </div>
+    <div class="recent-slider slider-nav-style-1">
+      <div class="recent-slider-wrapper swiper-wrapper">
+        <% pro.forEach(item =>{ %>
+        <div class="recent-slider-item swiper-slide">
+          <article class="list-product">
+            <div class="img-block">
+              <a href="/detail<%= item.id %>" class="thumbnail">
+                <img class="first-img" src="/images/<%= item.image %>" height="140px" alt="" />
+              </a>
+              <div class="quick-view">
+                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="icon-magnifier icons"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product-decs">
+              <a class="inner-link" href=""><span><%= item.name %></span></a>
+              <h2><a href="" class="product-link"><%= item.content %></a></h2>
+      
+              <div class="pricing-meta">
+                <ul>
+                  <li class="old-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.price) %></li>
+                  <li class="current-price">$<%= new Intl.NumberFormat('VND', {maximumSignificanDigits: 3 }).format(item.sale_price) %></li>
+                  <li class="discount-price">-10%</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <% }) %>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Recently Add area end -->
+<!-- Banner Area Start -->
+<div class="banner-area mb-30px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="banner-wrapper">
+          <a href=""><img src="https://shopfile.net/uploads/products/large/file-banner-poster-nuoc-uong-trai-cay-drink-53-demo.jpg" height="400px" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="banner-wrapper">
+          <a href=""><img src="https://in129.vn/wp-content/uploads/2016/04/in-poster-s-berry.jpg" height="400px" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%- include('../home/footer') %>

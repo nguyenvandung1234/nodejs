@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <ul class="lsMes" id="lsMes"></ul>
+    <form action="">
+      <input type="text" id="textCont" class="text">
+      <button id="btnsend">send</button>
+    </form>
+    <script>
+      var socket = io('http://localhost:3000/send');
+      const username = prompt('nhập tên');
+      socket.emit('user_chat','chào bạn '+username+'mới vào phòng chát');
+      $('#btnsend').click(function(e){
+        e.preventDefault();
+        var txtmes = $('#textCont').val();
+        socket.emit('user_chat',txtmes);
+        $('#textCont').val();
+      });
+
+      socket.on("server_chat",(data)=>{
+        Show_mess(data);
+      });
+
+      function Show_mess(mes){
+          var li = document.createElement('li');
+          li.innerHTML = mes;
+          const lmes = document.querySelector('.lsMes');
+          lmes.appendChild(li);
+      }
+    </script>
+</body>
+</html>

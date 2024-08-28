@@ -1,0 +1,78 @@
+<%- include('../admin/header') %>
+
+<%- include('../admin/aside') %>
+
+<div class="content-wrapper">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h4>  <i class="nav-icon fas fa-th"></i> List user</h4>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <section class="content">
+    <!-- Default box -->
+    <div class="card">
+      <div class="card-body">
+        <div class="list" style="display: flex; justify-content: space-between;">
+          <div class="item">
+            <form action="" method="get" class="form-inline">
+              <div class="form-group">
+                <input class="form-control" name="name" placeholder="Search...">
+              </div>
+    
+              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="item">
+            <a href="/create-user" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add</a>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>password</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% user.forEach(item =>{ %>
+              <tr>
+                <td><%= item.id %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.password %></td>
+                <td class="text-right">
+                  <a href="/edit-user<%= item.id %>" class="btn btn-sm btn-success"><i class="fa fa-edit"></i> edit</a>
+                  <a href="/delete-user<%= item.id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> delete</a>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <div class="card-tools">
+            <ul class="pagination pagination-sm">
+              <li class="page-item"><a href="/list-product" class="page-link">&laquo;</a></li>
+              <li class="page-item"><a href="/list-product" class="page-link">1</a></li>
+              <li class="page-item"><a href="/list-product" class="page-link">2</a></li>
+              <li class="page-item"><a href="/list-product" class="page-link">3</a></li>
+              <li class="page-item"><a href="/list-product" class="page-link">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.card -->
+
+  </section>
+</div>
+
+<%- include('../admin/footer') %>

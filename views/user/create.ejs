@@ -1,0 +1,49 @@
+<%- include('../admin/header') %>
+
+<%- include('../admin/aside') %>
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h4>  <i class="nav-icon fas fa-th"></i> Create user</h4>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+  <section class="content">
+    <!-- Default box -->
+    <div class="card">
+      
+        <div class="col-md-6">
+          <form action="/create-user/store" method="post">
+            <div class="card-body">
+              <div class="mb-3 mt-3">
+                <input type="text" class="form-control" placeholder="Name" name="name">
+              </div>
+              <div class="mb-3 mt-3">
+                <input type="email" class="form-control" placeholder="Email" name="email">
+              </div>
+              <div class="mb-3 mt-3">
+                <input type="password" class="form-control" placeholder="password" name="password">
+              </div>
+            </div>
+            <div class="" style="display: flex; justify-content: space-between; margin: 14px 20px;">
+              <div class="item">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Save</button>
+              </div>
+              <div class="item">
+                <a href="/list-user" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> back</a>
+              </div>
+            </div>
+          </form>
+        </div>
+
+    </div>
+</div>
+<!-- /.card -->
+
+</section>
+</div>
+<%- include('../admin/footer') %>
